@@ -1,6 +1,6 @@
 {
     "name": "dragonizado/romance",
-    "description": "This is the api package for romance relax",
+    "description": "Package that facilitates the connection between the prestashop web service with laravel",
     "authors": [
         {
             "name": "Jesus Francisco",
