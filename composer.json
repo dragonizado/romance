@@ -1,0 +1,26 @@
+{
+    "name": "dragonizado/romance",
+    "description": "This is the api package for romance relax",
+    "authors": [
+        {
+            "name": "Jesus Francisco",
+            "email": "jesusfrancisco@hotmail.es"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "Dragonizado\\Romance\\"  :  "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dragonizado\\Romance\\ApiRomanceServiceProvider"
+            ],
+            "aliases": {
+                "ApiRomance": "Dragonizado\\Romance\\Facades\\ApiRomance"
+            }
+        }
+    }
+}
