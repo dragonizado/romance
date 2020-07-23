@@ -50,19 +50,28 @@
         }
 
         public function where($custom = 'products',$params = ''){
-            $this->url .= $custom.'/'.$params;
+            if($params == ''){
+                $this->url .= $custom;
+            }else{
+                $this->url .= $custom .'/'.$params;
+            }
             return  $this;
         }
 
-        public function json(){
-            $this->output_format = 'JSON';
-            $this->url .= '?output_format='.$this->output_format ;
+        public function filter($filter){
+            $this->url .= "?".$filter;
             return $this;
         }
 
-        public function xml(){
+        public function json($initParam ='?'){
+            $this->output_format = 'JSON';
+            $this->url .= $initParam.'output_format='.$this->output_format ;
+            return $this;
+        }
+
+        public function xml($initParam ='?'){
             $this->output_format = 'XML';
-            $this->url .= '?output_format='.$this->output_format ;
+            $this->url .= $initParam.'output_format='.$this->output_format ;
             return $this;
         }
 
